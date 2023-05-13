@@ -5,19 +5,69 @@
             "alignment": "right",
             "segments": [
                 {
+                    "foreground": "#d1d1d1",
+                    "properties": {
+                        "always_enabled": true,
+                        "style": "round"
+                    },
+                    "style": "plain",
+                    "template": " {{ .FormattedMs }} <#d1d1d1,>|</>",
+                    "type": "executiontime"
+                },
+                {
+                    "foreground": "green",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}red{{ end }}"
+                    ],
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "plain",
+                    "template": " {{ if gt .Code 0 }}\u2a2f{{else}}\u2713{{ end }} <#d1d1d1,>|</>",
+                    "type": "exit"
+                },
+                {
+                    "type": "sysinfo",
+                    "style": "plain",
+                    "powerline_symbol": "",
+                    "foreground": "#e7e07d",
+                    "template": "  {{ round .PhysicalPercentUsed .Precision }}% <#d1d1d1,>|</> ",
+                    "properties": {
+                        "precision": 2
+                    }
+                },
+                {
+                    "type": "dotnet",
+                    "style": "plain",
+                    "powerline_symbol": "",
+                    "foreground": "#9f00c7",
+                    "template": "{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} <#d1d1d1,>|</> "
+                },
+                {
                     "foreground": "#f14545",
                     "style": "plain",
                     "template": "{{ .Name }}",
                     "type": "shell"
                 },
                 {
-                    "foreground": "#26C6DA",
+                    "foreground": "#d1d1d1",
                     "properties": {
                         "time_format": "15:04:05"
                     },
                     "style": "plain",
-                    "template": " <#ffffff,>|</> {{ .CurrentDate | date .Format }}",
+                    "template": " <#d1d1d1,>|</> {{ .CurrentDate | date .Format }}",
                     "type": "time"
+                },
+                {
+                    "type": "battery",
+                    "style": "plain",
+                    "foreground": "#26da5c",
+                    "template": " <#d1d1d1,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}",
+                    "properties": {
+                        "discharging_icon": " ",
+                        "charging_icon": " ",
+                        "charged_icon": " "
+                    }
                 }
             ],
             "type": "prompt"
@@ -27,36 +77,36 @@
             "newline": true,
             "segments": [
                 {
-                    "foreground": "#26C6DA",
+                    "foreground": "#66CDAA",
                     "style": "plain",
                     "template": "{{.Icon}} ",
                     "type": "os"
                 },
                 {
-                    "foreground": "#4550f1",
+                    "foreground": "#26C6DA",
                     "style": "plain",
-                    "template": "(<#f14545>{{ .UserName }} </><#ffffff>\u26A1</><#f14545>{{ .HostName }}</>)",
+                    "template": "(<#CD4277>{{ .UserName }} </><#d1d1d1>\u26A1</><#CD4277>{{ .HostName }}</>)",
                     "type": "session"
                 },
                 {
-                    "foreground": "#4550f1",
+                    "foreground": "#26C6DA",
                     "properties": {
                         "folder_separator_icon": "/",
                         "style": "full"
                     },
                     "style": "plain",
-                    "template": " <#26C6DA></> [<#ffffff>{{ .Path }}</>] ",
+                    "template": " <#66CDAA></> [<#d1d1d1>{{ .Path }}</>] ",
                     "type": "path"
                 },
                 {
-                    "foreground": "#26C6DA",
+                    "foreground": "#ffa5d8",
                     "powerline_symbol": "",
                     "properties": {
                         "fetch_stash_count": true,
                         "fetch_upstream_icon": true
                     },
                     "style": "plain",
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
                     "type": "git"
                 }
             ],
@@ -75,7 +125,7 @@
                 {
                     "foreground": "#CD4277",
                     "style": "plain",
-                    "template": "<#66CDAA>\u276f</><#26C6DA>\u276f</><#4550f1>\u276f</> ",
+                    "template": "<#66CDAA>\ue285</><#26C6DA>\ue285</><#26da5c>\ue285</> ",
                     "type": "text"
                 }
             ],
