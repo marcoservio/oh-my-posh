@@ -77,25 +77,25 @@
             "newline": true,
             "segments": [
                 {
-                    "foreground": "#8be9fd",
+                    "foreground": "#d1d1d1",
                     "style": "plain",
                     "template": "{{.Icon}} ",
                     "type": "os"
                 },
                 {
-                    "foreground": "#8be9fd",
+                    "foreground": "#d1d1d1",
                     "style": "plain",
                     "template": "(<#50fa7b>{{ .UserName }} </><#d1d1d1>\u26A1</><#50fa7b>{{ .HostName }}</>)",
                     "type": "session"
                 },
                 {
-                    "foreground": "#8be9fd",
+                    "foreground": "#d1d1d1",
                     "properties": {
                         "folder_separator_icon": "/",
                         "style": "full"
                     },
                     "style": "plain",
-                    "template": " <#66CDAA></> [<#bd93f9>{{ .Path }}</>] ",
+                    "template": " <#d1d1d1></> [<#bd93f9>{{ .Path }}</>] ",
                     "type": "path"
                 },
                 {
