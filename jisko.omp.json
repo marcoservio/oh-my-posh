@@ -116,21 +116,21 @@
       "alignment": "left",
       "newline": true,
       "segments": [
-        {
-          "foreground": "lightGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}red{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
-          "template": "\u279c ",
-          "type": "exit"
+                {
+                    "foreground": "#cd5e42",
+                    "style": "plain",
+                    "template": " ",
+                    "type": "root"
+                },
+                {
+                    "foreground": "#CD4277",
+                    "style": "powerline",
+                    "template": "\u279c ",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
         }
-      ],
-      "type": "prompt"
-    }
-  ],
-  "version": 2
+    ],
+    "version": 2
 }
