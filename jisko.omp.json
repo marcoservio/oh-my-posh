@@ -41,7 +41,7 @@
                     "style": "plain",
                     "powerline_symbol": "",
                     "foreground": "#9f00c7",
-                    "template": "{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} <#d1d1d1,>|</> "
+                    "template": " {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} <#d1d1d1,>|</> "
                 },
                 {
                     "foreground": "#ff5555",
