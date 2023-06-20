@@ -85,7 +85,7 @@
                 {
                     "foreground": "#d1d1d1",
                     "style": "plain",
-                    "template": "(<#50fa7b>{{ .UserName }} </><#d1d1d1>\u26A1 </><#50fa7b>  {{ .HostName }}</>)",
+                    "template": "(<#50fa7b>{{ .UserName }} </><#d1d1d1>\u26A1</><#50fa7b> {{ .HostName }}</>)",
                     "type": "session"
                 },
                 {
