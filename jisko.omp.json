@@ -123,7 +123,7 @@
                     "type": "root"
                 },
                 {
-                    "foreground": "#CD4277",
+                    "foreground": "lightGreen",
                     "style": "powerline",
                     "template": "\u279c ",
                     "type": "text"
