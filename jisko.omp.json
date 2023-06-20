@@ -124,8 +124,8 @@
                 },
                 {
                     "foreground": "#CD4277",
-                    "style": "plain",
-                    "template": "<#66CDAA>\ue285</><#26C6DA>\ue285</><#26da5c>\ue285</> ",
+                    "style": "powerline",
+                    "template": "\u279c ",
                     "type": "text"
                 }
             ],
