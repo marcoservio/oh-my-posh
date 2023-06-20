@@ -44,7 +44,7 @@
                     "template": " {{ if .Unsupported }} \uf071 {{ else }}{{ .Full }}{{ end }} <#d1d1d1,>|</> "
                 },
                 {
-                    "foreground": "darkRed",
+                    "foreground": "red",
                     "style": "plain",
                     "template": "{{ .Name }}",
                     "type": "shell"
