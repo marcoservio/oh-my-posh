@@ -44,7 +44,7 @@
                     "template": " {{ if .Unsupported }} \uf071 {{ else }}{{ .Full }}{{ end }} <#d1d1d1,>|</> "
                 },
                 {
-                    "foreground": "#ff5555",
+                    "foreground": "darkRed",
                     "style": "plain",
                     "template": "{{ .Name }}",
                     "type": "shell"
@@ -61,7 +61,7 @@
                 {
                     "type": "battery",
                     "style": "plain",
-                    "foreground": "#50fa7b",
+                    "foreground": "lightGreen",
                     "template": " <#d1d1d1,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}",
                     "properties": {
                         "discharging_icon": " ",
