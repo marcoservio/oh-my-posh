@@ -95,11 +95,11 @@
                         "style": "full"
                     },
                     "style": "plain",
-                    "template": " <#d1d1d1></> [<#bd93f9>{{ .Path }}</>] ",
+                    "template": " <#d1d1d1></> [<lightGreen>{{ .Path }}</>] ",
                     "type": "path"
                 },
                 {
-                    "foreground": "#ff79c6",
+                    "foreground": "#9f00c7",
                     "powerline_symbol": "",
                     "properties": {
                         "fetch_stash_count": true,
