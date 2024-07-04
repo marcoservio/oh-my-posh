@@ -31,7 +31,7 @@
                     "style": "plain",
                     "powerline_symbol": "",
                     "foreground": "#f1fa8c",
-                    "template": "  {{ round .PhysicalPercentUsed .Precision }}% <#d1d1d1,>|</> ",
+                    "template": " {{ round .PhysicalPercentUsed .Precision }}% <#d1d1d1,>|</> ",
                     "properties": {
                         "precision": 2
                     }
@@ -62,12 +62,7 @@
                     "type": "battery",
                     "style": "plain",
                     "foreground": "lightGreen",
-                    "template": " <#d1d1d1,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}",
-                    "properties": {
-                        "discharging_icon": " ",
-                        "charging_icon": " ",
-                        "charged_icon": " "
-                    }
+                    "template": " <#d1d1d1,>|</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}"
                 }
             ],
             "type": "prompt"
@@ -76,12 +71,6 @@
             "alignment": "left",
             "newline": true,
             "segments": [
-                {
-                    "foreground": "#d1d1d1",
-                    "style": "plain",
-                    "template": "{{.Icon}} ",
-                    "type": "os"
-                },
                 {
                     "foreground": "#d1d1d1",
                     "style": "plain",
@@ -95,7 +84,7 @@
                         "style": "full"
                     },
                     "style": "plain",
-                    "template": " <#d1d1d1></> [<lightGreen>{{ .Path }}</>] ",
+                    "template": " [<lightGreen>{{ .Path }}</>] ",
                     "type": "path"
                 },
                 {
