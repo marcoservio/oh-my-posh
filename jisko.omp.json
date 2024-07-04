@@ -74,7 +74,7 @@
                 {
                     "foreground": "#d1d1d1",
                     "style": "plain",
-                    "template": "(<lightGreen>{{ .UserName }} </><#d1d1d1>\u26A1 </><lightGreen>{{ .HostName }}</>)",
+                    "template": "(<lightGreen>{{ .UserName }} </><#d1d1d1>- </><lightGreen>{{ .HostName }}</>)",
                     "type": "session"
                 },
                 {
